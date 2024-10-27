@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+</head>
+<body>
+  <h2>Welcome, <%= user.username %></h2>
+  <p>User ID: <%= user.userId %></p>
+  
+  <h3>Currently Logged In Users</h3>
+  <ul>
+    <% loggedInUsers.forEach((loggedInUser) => { %>
+      <li><%= loggedInUser %></li>
+    <% }); %>
+  </ul>
+
+  <form action="/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form>
+  <a href="/active-users">View Active Users</a>
+</body>
+</html>
